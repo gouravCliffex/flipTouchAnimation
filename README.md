@@ -37,47 +37,33 @@ switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
                 lastY = event.getY();
                 lastX = event.getX();
-                
-
                 mCurrAngle =   Math.toDegrees(Math.atan2(Math.abs(x - lastX), Math.abs(lastY-yc)));
                 System.out.println("first :" + mCurrAngle);
-
                 break;
             }
             case MotionEvent.ACTION_MOVE: {
-
                  moveCheck = true;
                 mPrevAngle = mCurrAngle;
                 mCurrAngle =   Math.abs(Math.toDegrees(Math.atan2(Math.abs(x - lastX), Math.abs(lastY-yc))));
 
 
-            if (event.getX() <= lastX) {
-
-             
+            if (event.getX() <= lastX) 
                 swipeleftAnimation();
-
-
             }
 
-                else
-            {
-//          
+              else
+            {       
                 swiperightAnimation();
             }
 
-                System.out.println("last :" + mCurrAngle);
-                break;
+           
             }
             case MotionEvent.ACTION_UP : {
                 if (event.getX() <= lastX) {
-
                     swipeleftupAnimation();
                 }
-
-
                 else
                {
-
                    swiperightUpAnimation();
 
                 }
