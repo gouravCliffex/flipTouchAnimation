@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
-        loadAnimations();
+
         changeCameraDistance();
 
 //        CustomGestureDetector customGestureDetector = new CustomGestureDetector();
@@ -159,31 +159,31 @@ public class MainActivity extends AppCompatActivity {
         mCardBackLayout.setCameraDistance(scale);
     }
 
-    private void loadAnimations() {
-        mSetRightOut = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.out_animation);
-        mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.in_animation);
-    }
+//    private void loadAnimations() {
+//        mSetRightOut = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.out_animation);
+//        mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.in_animation);
+//    }
 
     private void findViews() {
         mCardBackLayout = findViewById(R.id.card_back);
         mCardFrontLayout = findViewById(R.id.card_front);
     }
 
-    public void flipCard() {
-        if (!mIsBackVisible) {
-            mSetRightOut.setTarget(mCardFrontLayout);
-            mSetLeftIn.setTarget(mCardBackLayout);
-            mSetRightOut.start();
-            mSetLeftIn.start();
-            mIsBackVisible = true;
-        } else {
-            mSetRightOut.setTarget(mCardBackLayout);
-            mSetLeftIn.setTarget(mCardFrontLayout);
-            mSetRightOut.start();
-            mSetLeftIn.start();
-            mIsBackVisible = false;
-        }
-    }
+//    public void flipCard() {
+//        if (!mIsBackVisible) {
+//            mSetRightOut.setTarget(mCardFrontLayout);
+//            mSetLeftIn.setTarget(mCardBackLayout);
+//            mSetRightOut.start();
+//            mSetLeftIn.start();
+//            mIsBackVisible = true;
+//        } else {
+//            mSetRightOut.setTarget(mCardBackLayout);
+//            mSetLeftIn.setTarget(mCardFrontLayout);
+//            mSetRightOut.start();
+//            mSetLeftIn.start();
+//            mIsBackVisible = false;
+//        }
+//    }
 
 //    class CustomGestureDetector extends GestureDetector.SimpleOnGestureListener {
 //        @Override
