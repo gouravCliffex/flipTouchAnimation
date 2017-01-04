@@ -30,7 +30,6 @@ Create an xml file with two framelayout one for front and second for back.
 
 Then intilize both framelayout on your main activty.
 
-
 overide onTouchEvent method in your main activity.
 
 switch (event.getAction()) {
@@ -45,18 +44,13 @@ switch (event.getAction()) {
                  moveCheck = true;
                 mPrevAngle = mCurrAngle;
                 mCurrAngle =   Math.abs(Math.toDegrees(Math.atan2(Math.abs(x - lastX), Math.abs(lastY-yc))));
-
-
             if (event.getX() <= lastX) 
                 swipeleftAnimation();
             }
-
               else
             {       
                 swiperightAnimation();
             }
-
-           
             }
             case MotionEvent.ACTION_UP : {
                 if (event.getX() <= lastX) {
@@ -65,7 +59,6 @@ switch (event.getAction()) {
                 else
                {
                    swiperightUpAnimation();
-
                 }
                 mPrevAngle = mCurrAngle = 0;
                 break;
