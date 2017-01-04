@@ -57,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
             case MotionEvent.ACTION_DOWN: {
                 lastY = event.getY();
                 lastX = event.getX();
-                //mCardFrontLayout.clearAnimation();
-                //mCurrAngle = getAngle(event.getY(), event.getX());
+
 
                 mCurrAngle =   Math.toDegrees(Math.atan2(Math.abs(x - lastX), Math.abs(lastY-yc)));
                 System.out.println("first :" + mCurrAngle);
@@ -74,11 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (event.getX() <= lastX) {
 
-//                if (mCurrAngle >= 30)
-//                {
-//                    swipeleftupAnimation();
-//                }
-//                else
+
                 swipeleftAnimation();
 
 
@@ -86,11 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
                 else
             {
-//                if (mCurrAngle >= 30)
-//                {
-//                    swiperightUpAnimation();
-//                }
-//                else
+//
                 swiperightAnimation();
             }
 
@@ -108,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                {
 
                    swiperightUpAnimation();
-//
+
                 }
                 mPrevAngle = mCurrAngle = 0;
                 break;
