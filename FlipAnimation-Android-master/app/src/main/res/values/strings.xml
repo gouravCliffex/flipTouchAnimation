@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flip Animation Touch</string>
+    <string name="front">FRONT</string>
+    <string name="back">BACK</string>
+</resources>
